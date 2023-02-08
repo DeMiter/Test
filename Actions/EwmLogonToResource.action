@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.RestService.SendRequest",
+	"ActionResult": {
+		"_Name": "EwmLogonActionResult"
+	},
+	"ShowActivityIndicator": true,
+	"OnSuccess": "/Test/Rules/EwmLogon/EwmLogonSuccess.js",	
+	"OnFailure": "/Test/Rules/EwmLogon/EwmLogonFailure.js",	
+	"Target": {
+		"Service": "/Test/Services/RTOP.service",
+		"Path": "Users('')/SAP__self.LogonToWarehouseResource",
+		"RequestProperties": {
+			"Method": "POST",
+			"Body": {
+				"EWMWarehouse" : "BS01",
+				"WarehouseResource" : "DIMITROV"
+			}
+		}
+	}
+}

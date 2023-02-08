@@ -1,0 +1,125 @@
+{
+	"Caption": "UnloadingToursType Detail",
+	"DesignTimeTarget": {
+		"Service": "/Test/Services/RTOP.service",
+		"EntitySet": "UnloadingTours",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{IntrLogsOpTourExternalID}",
+						"Subhead": "{EWMWarehouse}",
+						"BodyText": "",
+						"Footnote": "{WarehouseResource}",
+						"Description": "{IntralogisticsOperationsTour}",
+						"StatusText": "{IntralogisticsOperationsDriver}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{PlannedDepartureUTCDateTime}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "EWMWarehouse",
+							"Value": "{EWMWarehouse}"
+						},
+						{
+							"KeyName": "IntralogisticsOperationsTour",
+							"Value": "{IntralogisticsOperationsTour}"
+						},
+						{
+							"KeyName": "IntrLogsOpTourExternalID",
+							"Value": "{IntrLogsOpTourExternalID}"
+						},
+						{
+							"KeyName": "WarehouseResource",
+							"Value": "{WarehouseResource}"
+						},
+						{
+							"KeyName": "IntralogisticsOperationsDriver",
+							"Value": "{IntralogisticsOperationsDriver}"
+						},
+						{
+							"KeyName": "PlannedDepartureUTCDateTime",
+							"Value": "{PlannedDepartureUTCDateTime}"
+						},
+						{
+							"KeyName": "ILOPlannedArrivalUTCDateTime",
+							"Value": "{ILOPlannedArrivalUTCDateTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpTourExecutionStatus",
+							"Value": "{IntrLogsOpTourExecutionStatus}"
+						},
+						{
+							"KeyName": "IntralogisticsOperationsRoute",
+							"Value": "{IntralogisticsOperationsRoute}"
+						},
+						{
+							"KeyName": "Description",
+							"Value": "{Description}"
+						},
+						{
+							"KeyName": "EndPointStorageType",
+							"Value": "{EndPointStorageType}"
+						},
+						{
+							"KeyName": "EndPointStorageSection",
+							"Value": "{EndPointStorageSection}"
+						},
+						{
+							"KeyName": "EndPointStorageBin",
+							"Value": "{EndPointStorageBin}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteVersion",
+							"Value": "{IntrLogsOpRouteVersion}"
+						},
+						{
+							"KeyName": "UnldgStopSqncIsChangeable",
+							"Value": "{UnldgStopSqncIsChangeable}"
+						},
+						{
+							"KeyName": "IntrLogsOpNextTourStop",
+							"Value": "{IntrLogsOpNextTourStop}"
+						},
+						{
+							"KeyName": "IntrLogsOpNextStopType",
+							"Value": "{IntrLogsOpNextStopType}"
+						},
+						{
+							"KeyName": "ILONextTourStopExecSqncNmbr",
+							"Value": "{ILONextTourStopExecSqncNmbr}"
+						},
+						{
+							"KeyName": "ILONextTourStopHandoverPoint",
+							"Value": "{ILONextTourStopHandoverPoint}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "UnloadingTours_Detail",
+	"PrefersLargeCaption": true
+}

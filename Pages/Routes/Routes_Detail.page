@@ -1,0 +1,117 @@
+{
+	"Caption": "RoutesType Detail",
+	"DesignTimeTarget": {
+		"Service": "/Test/Services/RTOP.service",
+		"EntitySet": "Routes",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{Warehouse}",
+						"Subhead": "{IntralogisticsOperationsRoute}",
+						"BodyText": "",
+						"Footnote": "{IntrLogsOpRouteParamGroup}",
+						"Description": "{IntrLogsOpRouteType}",
+						"StatusText": "{StartPointStorageType}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{StartPointStorageSection}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Warehouse",
+							"Value": "{Warehouse}"
+						},
+						{
+							"KeyName": "IntralogisticsOperationsRoute",
+							"Value": "{IntralogisticsOperationsRoute}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteType",
+							"Value": "{IntrLogsOpRouteType}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteParamGroup",
+							"Value": "{IntrLogsOpRouteParamGroup}"
+						},
+						{
+							"KeyName": "StartPointStorageType",
+							"Value": "{StartPointStorageType}"
+						},
+						{
+							"KeyName": "StartPointStorageSection",
+							"Value": "{StartPointStorageSection}"
+						},
+						{
+							"KeyName": "StartPointStorageBin",
+							"Value": "{StartPointStorageBin}"
+						},
+						{
+							"KeyName": "EndPointStorageType",
+							"Value": "{EndPointStorageType}"
+						},
+						{
+							"KeyName": "EndPointStorageSection",
+							"Value": "{EndPointStorageSection}"
+						},
+						{
+							"KeyName": "EndPointStorageBin",
+							"Value": "{EndPointStorageBin}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteLifecycleSts",
+							"Value": "{IntrLogsOpRouteLifecycleSts}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteProposalProfile",
+							"Value": "{IntrLogsOpRouteProposalProfile}"
+						},
+						{
+							"KeyName": "LifeCycleStatusDateTime",
+							"Value": "{LifeCycleStatusDateTime}"
+						},
+						{
+							"KeyName": "CreationDateTime",
+							"Value": "{CreationDateTime}"
+						},
+						{
+							"KeyName": "CreatedByUser",
+							"Value": "{CreatedByUser}"
+						},
+						{
+							"KeyName": "LastChangeDateTime",
+							"Value": "{LastChangeDateTime}"
+						},
+						{
+							"KeyName": "LastChangedByUser",
+							"Value": "{LastChangedByUser}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Routes_Detail",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,53 @@
+{
+	"Caption": "UsersType Detail",
+	"DesignTimeTarget": {
+		"Service": "/Test/Services/RTOP.service",
+		"EntitySet": "Users",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{IntralogisticsOperationsUser}",
+						"Subhead": "",
+						"BodyText": "",
+						"Footnote": "",
+						"Description": "",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "IntralogisticsOperationsUser",
+							"Value": "{IntralogisticsOperationsUser}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Users_Detail",
+	"PrefersLargeCaption": true
+}

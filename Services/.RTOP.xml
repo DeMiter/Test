@@ -1,0 +1,2020 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="RoutesType">
+                <Key>
+                    <PropertyRef Name="IntrLogsOpRouteUUID"/>
+                </Key>
+                <Property Name="IntrLogsOpRouteUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Warehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="IntralogisticsOperationsRoute" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="IntrLogsOpRouteType" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="IntrLogsOpRouteParamGroup" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="StartPointStorageType" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="StartPointStorageSection" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="StartPointStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="EndPointStorageType" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="EndPointStorageSection" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="EndPointStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="IntrLogsOpRouteLifecycleSts" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="IntrLogsOpRouteProposalProfile" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="LifeCycleStatusDateTime" Type="Edm.DateTimeOffset"/>
+                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CreatedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <NavigationProperty Name="_RouteVersion" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RouteVersionsType)"/>
+            </EntityType>
+            <EntityType Name="LoadingToursType">
+                <Key>
+                    <PropertyRef Name="IntrLogsOpTourUUID"/>
+                </Key>
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="IntralogisticsOperationsTour" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="IntrLogsOpTourExternalID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="IntrLogsOpRouteUUID" Type="Edm.Guid"/>
+                <Property Name="IntrLogsOpRouteVersionUUID" Type="Edm.Guid"/>
+                <Property Name="IntralogisticsOperationsLoader" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="PlannedDepartureUTCDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="IntrLogsOpTourExecutionStatus" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="IntrLogsOpRouteVersion" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="IntrLogsOpRouteVersIsSelfLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IntralogisticsOperationsRoute" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60"/>
+                <Property Name="StartPointStorageType" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="StartPointStorageSection" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="StartPointStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="NumberOfHandlingUnit" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_ExecutionStatusText" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.ExecutionStatusTextsType)"/>
+                <NavigationProperty Name="_Route" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RoutesType"/>
+                <NavigationProperty Name="_RouteVersion" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RouteVersionsType"/>
+                <NavigationProperty Name="_TourOpsLoadgHndlgUnit" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingHandlingUnitsType)" Partner="_TourOpsLoadingTour">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="UnloadingToursType">
+                <Key>
+                    <PropertyRef Name="IntrLogsOpTourUUID"/>
+                </Key>
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="IntralogisticsOperationsTour" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="IntrLogsOpTourExternalID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="IntrLogsOpRouteUUID" Type="Edm.Guid"/>
+                <Property Name="IntrLogsOpRouteVersionUUID" Type="Edm.Guid"/>
+                <Property Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="IntralogisticsOperationsDriver" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="PlannedDepartureUTCDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="ILOPlannedArrivalUTCDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="IntrLogsOpTourExecutionStatus" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="IntralogisticsOperationsRoute" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60"/>
+                <Property Name="EndPointStorageType" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="EndPointStorageSection" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="EndPointStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="IntrLogsOpRouteVersion" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="UnldgStopSqncIsChangeable" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IntrLogsOpNextTourStop" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="IntrLogsOpNextStopType" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="ILONextTourStopExecSqncNmbr" Type="Edm.Decimal" Nullable="false" Precision="8"/>
+                <Property Name="ILONextTourStopHandoverPoint" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_ExecutionStatusText" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.ExecutionStatusTextsType)"/>
+                <NavigationProperty Name="_Route" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RoutesType"/>
+                <NavigationProperty Name="_RouteVersion" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RouteVersionsType"/>
+                <NavigationProperty Name="_TourOpsUnldgHndlgUnit" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingHandlingUnitsType)"/>
+                <NavigationProperty Name="_TourOpsUnldgTourStop" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingTourStopsType)" Partner="_TourOpsUnloadingTour">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="RouteVersionsType">
+                <Key>
+                    <PropertyRef Name="IntrLogsOpRouteVersionUUID"/>
+                </Key>
+                <Property Name="IntrLogsOpRouteVersionUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="IntrLogsOpRouteUUID" Type="Edm.Guid"/>
+                <Property Name="IntrLogsOpRouteVersion" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="RouteVersValdtyStartDateTime" Type="Edm.DateTimeOffset"/>
+                <Property Name="IntrLogsOpRouteVersionStatus" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="IntrLogsOpRouteVersionIsBlkd" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IntrLogsOpRouteVersIsSelfLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="AvgTransportDuration" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="AvgTransportTimeUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="PlngCalendarPerdcLotSizing" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="PlanningCalendar" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="PackagingMaterial" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="NumberOfHandlingUnit" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="RsceIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="UnitPositionIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="UnitPositionForLoadgMinValue" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="UnitPositionForLoadgMaxValue" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="StartPointIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="RsceIsRqdForUnldg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IntrLogsOpConfirmationMethod" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="UnldgStopSqncIsChangable" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IntrLogsOpPrfrdUnldgDirection" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="RsrcGrp" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="IntrLogsOpCycleTime" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpCycleTimeUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="StartBufferDuration" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="StartBufferTimeUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="EndBufferDuration" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="EndBufferTimeUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="IntrLogsOpDepartureTimeType" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="IntrLogsOpPlanningHorizon" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpPlanningHorizonUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="AvgLoadingDuration" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="AvgLoadingTimeUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="IntrLogsOpShift1CycleTime" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpShift2CycleTime" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpShift3CycleTime" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpShift4CycleTime" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpShift5CycleTime" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpAttachment" Type="Edm.Guid"/>
+                <Property Name="IntrLogsOpTourCrtnPrecondition" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="IntrLogsOpLowerTimeLimit" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpLowerTimeLimitUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="IntrLogsOpUpperTimeLimit" Type="Edm.Decimal" Nullable="false" Precision="10"/>
+                <Property Name="IntrLogsOpUpperTimeLimitUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CreatedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <NavigationProperty Name="_Route" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RoutesType" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="UnloadingTourStopsType">
+                <Key>
+                    <PropertyRef Name="IntrLogsOpTourStopUUID"/>
+                </Key>
+                <Property Name="IntrLogsOpTourStopUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="IntralogisticsOperationsStop" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="IntrLogsOpStopType" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="RouteStopSequenceNumber" Type="Edm.Decimal" Nullable="false" Precision="8"/>
+                <Property Name="ExecutionStopSequenceNumber" Type="Edm.Decimal" Nullable="false" Precision="8"/>
+                <Property Name="IntrLogsOpStopStatus" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="IntrLogsOpHandoverPoint" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="DestinationStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="IntrLogsOpConfirmationMethod" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="NumberOfHandlingUnit" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_TourOpsUnldgHndlgUnit" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingHandlingUnitsType)" Partner="_TourOpsUnldgTourStop">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="_TourOpsUnloadingTour" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false" Partner="_TourOpsUnldgTourStop">
+                    <ReferentialConstraint Property="IntrLogsOpTourUUID" ReferencedProperty="IntrLogsOpTourUUID"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="ExecutionStatusTextsType">
+                <Key>
+                    <PropertyRef Name="SystemStatus"/>
+                    <PropertyRef Name="Language"/>
+                </Key>
+                <Property Name="SystemStatus" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="SystemStatusName" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="SystemStatusShortName" Type="Edm.String" Nullable="false" MaxLength="4"/>
+            </EntityType>
+            <EntityType Name="UnloadingHandlingUnitsType">
+                <Key>
+                    <PropertyRef Name="IntrLogsOpTourLoadgPlanUUID"/>
+                </Key>
+                <Property Name="IntrLogsOpTourLoadgPlanUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="IntrLogsOpTourStopUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="HandlingUnitUUID" Type="Edm.Guid"/>
+                <Property Name="LoadingLogicalPosition" Type="Edm.String" Nullable="false" MaxLength="11"/>
+                <Property Name="IntrLogsOpTourLoadgPlanStatus" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="EWMProductionSupplyArea" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="PackagingMaterial" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="IntrLogsOpHandoverPoint" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="DestinationStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="ProductDescription" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="IntrLogsOpFinalStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_TourOpsUnldgTourStop" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingTourStopsType" Nullable="false" Partner="_TourOpsUnldgHndlgUnit">
+                    <ReferentialConstraint Property="IntrLogsOpTourStopUUID" ReferencedProperty="IntrLogsOpTourStopUUID"/>
+                </NavigationProperty>
+                <NavigationProperty Name="_TourOpsUnloadingTour" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType"/>
+            </EntityType>
+            <EntityType Name="LoadingHandlingUnitsType">
+                <Key>
+                    <PropertyRef Name="HandlingUnitNumber"/>
+                    <PropertyRef Name="EWMWarehouse"/>
+                </Key>
+                <Property Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="HandlingUnitUUID" Type="Edm.Guid"/>
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="PackagingMaterial" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="LoadingLogicalPosition" Type="Edm.String" Nullable="false" MaxLength="11"/>
+                <Property Name="DestinationStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="SourceStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="ProductDescription" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="IntrLogsOpFinalStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="IntrLogsOpHandoverPoint" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="EWMProductionSupplyArea" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="IntrLogsOpLoadgSrceStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_TourOpsLoadingTour" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType" Nullable="false" Partner="_TourOpsLoadgHndlgUnit">
+                    <ReferentialConstraint Property="IntrLogsOpTourUUID" ReferencedProperty="IntrLogsOpTourUUID"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="UsersType">
+                <Key>
+                    <PropertyRef Name="IntralogisticsOperationsUser"/>
+                </Key>
+                <Property Name="IntralogisticsOperationsUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.SAP__Message)" Nullable="false"/>
+            </EntityType>
+            <ComplexType Name="TourRecovery_Type">
+                <Property Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="ILOTourOperationsScenario" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid"/>
+                <Property Name="StartPointIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="UnitPositionForLoadgMaxValue" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="UnitPositionForLoadgMinValue" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="UnitPositionIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+            </ComplexType>
+            <ComplexType Name="D_LoadgTourVldt1stHndlgUnitR">
+                <Property Name="IntrLogsOpTourUUID" Type="Edm.Guid"/>
+                <Property Name="StartPointIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="UnitPositionForLoadgMaxValue" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="UnitPositionForLoadgMinValue" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="UnitPositionIsRqdForLoadg" Type="Edm.Boolean" Nullable="false"/>
+            </ComplexType>
+            <ComplexType Name="TowingVehicleFlag_Type">
+                <Property Name="IntrLogsOpIsTowingVehicle" Type="Edm.Boolean" Nullable="false"/>
+            </ComplexType>
+            <ComplexType Name="D_TourVerifyBinForEmptiesRqdR">
+                <Property Name="IntrLogsOpIsBinForEmptiesRqd" Type="Edm.Boolean" Nullable="false"/>
+            </ComplexType>
+            <ComplexType Name="SAP__Message">
+                <Property Name="code" Type="Edm.String" Nullable="false"/>
+                <Property Name="message" Type="Edm.String" Nullable="false"/>
+                <Property Name="target" Type="Edm.String"/>
+                <Property Name="additionalTargets" Type="Collection(Edm.String)" Nullable="false"/>
+                <Property Name="transition" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="numericSeverity" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="longtextUrl" Type="Edm.String"/>
+            </ComplexType>
+            <Action Name="ChangeTourStop" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false"/>
+                <Parameter Name="IntralogisticsOperationsStop" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="true"/>
+            </Action>
+            <Action Name="LoadHandlingUnitOnTour" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType)" Nullable="false"/>
+                <Parameter Name="IntrLogsOpTourUUID" Type="Edm.Guid" Nullable="true"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Parameter Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Parameter Name="LoadingLogicalPosition" Type="Edm.String" Nullable="false" MaxLength="11"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType" Nullable="false"/>
+            </Action>
+            <Action Name="InterruptTourLoading" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType" Nullable="false"/>
+                <Parameter Name="WarehouseStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="ReverseLoadingFromTour" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingHandlingUnitsType" Nullable="false"/>
+                <Parameter Name="WarehouseStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="CompleteTourLoading" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType" Nullable="false"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Parameter Name="StartPointStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="LogoffFromWarehouseResource" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UsersType" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="ConfirmTourTransferPoint" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false"/>
+                <Parameter Name="IntralogisticsOperationsStop" Type="Edm.String" Nullable="false" MaxLength="15"/>
+            </Action>
+            <Action Name="UnloadAllHndlgUnitsPerTourStop" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingTourStopsType" Nullable="false"/>
+            </Action>
+            <Action Name="ValidateFirstHandlingUnitForUnloading" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+            </Action>
+            <Action Name="CompleteTour" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false"/>
+                <Parameter Name="EndPointStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Parameter Name="StorageBinForEmpties" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="ValidateWarehouseResource" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UsersType" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="UnloadHandlingUnitFromTour" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingHandlingUnitsType" Nullable="false"/>
+                <Parameter Name="ExceptionCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Action Name="LogonToWarehouseResource" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UsersType" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.TowingVehicleFlag_Type" Nullable="true"/>
+            </Action>
+            <Action Name="StartTourDelivery" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+            </Action>
+            <Function Name="DetermineTour" IsBound="true">
+                <Parameter Name="_it" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType)" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType"/>
+            </Function>
+            <Function Name="DetermineSystemGuidedTourForUnloading" IsBound="true">
+                <Parameter Name="_it" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType)" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType"/>
+            </Function>
+            <Function Name="VerifyTourRecovery" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UsersType" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.TourRecovery_Type"/>
+            </Function>
+            <Function Name="VerifyBinForEmptiesRequired" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType" Nullable="false"/>
+                <Parameter Name="WarehouseStorageBin" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.D_TourVerifyBinForEmptiesRqdR"/>
+            </Function>
+            <Function Name="ValidateFirstHandlingUnitForLoading" IsBound="true">
+                <Parameter Name="_it" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType)" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="HandlingUnitNumber" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.D_LoadgTourVldt1stHndlgUnitR"/>
+            </Function>
+            <Function Name="DetermineSystemGuidedTourForLoading" IsBound="true">
+                <Parameter Name="_it" Type="Collection(com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType)" Nullable="false"/>
+                <Parameter Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Parameter Name="WarehouseResource" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType"/>
+            </Function>
+            <EntityContainer Name="Container">
+                <EntitySet Name="ExecutionStatusTexts" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.ExecutionStatusTextsType"/>
+                <EntitySet Name="LoadingHandlingUnits" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingHandlingUnitsType">
+                    <NavigationPropertyBinding Path="_TourOpsLoadingTour" Target="LoadingTours"/>
+                </EntitySet>
+                <EntitySet Name="LoadingTours" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.LoadingToursType">
+                    <NavigationPropertyBinding Path="_ExecutionStatusText" Target="ExecutionStatusTexts"/>
+                    <NavigationPropertyBinding Path="_Route" Target="Routes"/>
+                    <NavigationPropertyBinding Path="_RouteVersion" Target="RouteVersions"/>
+                    <NavigationPropertyBinding Path="_TourOpsLoadgHndlgUnit" Target="LoadingHandlingUnits"/>
+                </EntitySet>
+                <EntitySet Name="Routes" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RoutesType">
+                    <NavigationPropertyBinding Path="_RouteVersion" Target="RouteVersions"/>
+                </EntitySet>
+                <EntitySet Name="RouteVersions" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.RouteVersionsType">
+                    <NavigationPropertyBinding Path="_Route" Target="Routes"/>
+                </EntitySet>
+                <EntitySet Name="UnloadingHandlingUnits" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingHandlingUnitsType">
+                    <NavigationPropertyBinding Path="_TourOpsUnldgTourStop" Target="UnloadingTourStops"/>
+                    <NavigationPropertyBinding Path="_TourOpsUnloadingTour" Target="UnloadingTours"/>
+                </EntitySet>
+                <EntitySet Name="UnloadingTours" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingToursType">
+                    <NavigationPropertyBinding Path="_ExecutionStatusText" Target="ExecutionStatusTexts"/>
+                    <NavigationPropertyBinding Path="_Route" Target="Routes"/>
+                    <NavigationPropertyBinding Path="_RouteVersion" Target="RouteVersions"/>
+                    <NavigationPropertyBinding Path="_TourOpsUnldgHndlgUnit" Target="UnloadingHandlingUnits"/>
+                    <NavigationPropertyBinding Path="_TourOpsUnldgTourStop" Target="UnloadingTourStops"/>
+                </EntitySet>
+                <EntitySet Name="UnloadingTourStops" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UnloadingTourStopsType">
+                    <NavigationPropertyBinding Path="_TourOpsUnldgHndlgUnit" Target="UnloadingHandlingUnits"/>
+                    <NavigationPropertyBinding Path="_TourOpsUnloadingTour" Target="UnloadingTours"/>
+                </EntitySet>
+                <EntitySet Name="Users" EntityType="com.sap.gateway.srvd_a2x.api_ilo_touroperations.v0001.UsersType"/>
+            </EntityContainer>
+            <Annotations Target="SAP__self.RoutesType/Warehouse">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Warehouse Number"/>
+                <Annotation Term="SAP__common.Heading" String="WhN"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Warehouse Number/Warehouse Complex"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/IntralogisticsOperationsRoute">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/IntrLogsOpRouteType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/IntrLogsOpRouteParamGroup">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Param. Group"/>
+                <Annotation Term="SAP__common.Heading" String="Route Parameter Group"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Route Parameter Group"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/StartPointStorageType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="SP Storage Type"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Type of Start Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Type of Tour Start Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/StartPointStorageSection">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="SP Storage Section"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Section of Start Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Section of Tour Start Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/StartPointStorageBin">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="SP Storage Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Bin of Start Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Bin of Tour Start Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/EndPointStorageType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EP Storage Type"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Type of End Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Type of Tour End Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/EndPointStorageSection">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EP Storage Section"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Section of End Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Section of Tour End Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/EndPointStorageBin">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EP Storage Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Bin of End Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Bin of Tour End Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/IntrLogsOpRouteLifecycleSts">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Route Lfe Cycl Sts"/>
+                <Annotation Term="SAP__common.Heading" String="Life Cycle Status of Route"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Life Cycle Status of Route"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/IntrLogsOpRouteProposalProfile">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Proposal Profile"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/CreatedByUser">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="User Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/LastChangedByUser">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="User Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType">
+                <Annotation Term="SAP__common.Label" String="MFG Logistics Route"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Routes">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Warehouse"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpRouteType"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointStorageType"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointStorageSection"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointStorageBin"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="EndPointStorageType"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="EndPointStorageSection"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="EndPointStorageBin"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpRouteProposalProfile"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="CreatedByUser"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="LastChangedByUser"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/EWMWarehouse">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Warehouse Number"/>
+                <Annotation Term="SAP__common.Heading" String="WhN"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Warehouse Number/Warehouse Complex"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntralogisticsOperationsTour">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Tour ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpTourExternalID">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="External Tour ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpTourExecutionStatus">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Exec.Stat."/>
+                <Annotation Term="SAP__common.Heading" String="Tour Execution Status"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Tour Execution Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpRouteVersion">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Version"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpRouteVersIsSelfLoadg">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Loading by Driver"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntralogisticsOperationsRoute">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/Description">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/StartPointStorageType">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="SP Storage Type"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Type of Start Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Type of Tour Start Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/StartPointStorageSection">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="SP Storage Section"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Section of Start Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Section of Tour Start Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/StartPointStorageBin">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="SP Storage Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Bin of Start Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Bin of Tour Start Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/NumberOfHandlingUnit">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Number of HUs"/>
+                <Annotation Term="SAP__common.Heading" String="Number of Handling Units"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Number of Handling Units"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/_TourOpsLoadgHndlgUnit">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType">
+                <Annotation Term="SAP__common.Label" String="Loading Tour Projection"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>
+                            IntralogisticsOperationsTour
+                        </PropertyPath>
+                        <PropertyPath>
+                            EWMWarehouse
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/LoadingTours">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="EWMWarehouse"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpTourExternalID"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpTourExecutionStatus"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpRouteVersIsSelfLoadg"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Description"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointStorageType"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointStorageSection"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointStorageBin"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/EWMWarehouse">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Warehouse Number"/>
+                <Annotation Term="SAP__common.Heading" String="WhN"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Warehouse Number/Warehouse Complex"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntralogisticsOperationsTour">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Tour ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpTourExternalID">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="External Tour ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpTourExecutionStatus">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Exec.Stat."/>
+                <Annotation Term="SAP__common.Heading" String="Tour Execution Status"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Tour Execution Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntralogisticsOperationsRoute">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/Description">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/EndPointStorageType">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EP Storage Type"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Type of End Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Type of Tour End Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/EndPointStorageSection">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EP Storage Section"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Section of End Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Section of Tour End Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/EndPointStorageBin">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EP Storage Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Storage Bin of End Point"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage Bin of Tour End Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpRouteVersion">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Version"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/UnldgStopSqncIsChangeable">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Changeable Unl Stop"/>
+                <Annotation Term="SAP__common.Heading" String="Unloading Stop Sequence is Changeable"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unloading Stop Sequence is Changeable"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpNextTourStop">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Stop ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpNextStopType">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Stop Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/ILONextTourStopExecSqncNmbr">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Actual Sequence No."/>
+                <Annotation Term="SAP__common.Heading" String="Actual Sequence Number"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Actual Sequence Number of Stops"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/ILONextTourStopHandoverPoint">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Handover Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/_TourOpsUnldgTourStop">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType">
+                <Annotation Term="SAP__common.Label" String="Unloading Tour Projection"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>
+                            IntralogisticsOperationsTour
+                        </PropertyPath>
+                        <PropertyPath>
+                            EWMWarehouse
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/UnloadingTours">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    IntrLogsOpNextTourStop
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpNextStopType
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ILONextTourStopExecSqncNmbr
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ILONextTourStopHandoverPoint
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    IntrLogsOpNextTourStop
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpNextStopType
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ILONextTourStopExecSqncNmbr
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ILONextTourStopHandoverPoint
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpRouteVersion">
+                <Annotation Term="SAP__common.FieldControl" EnumMember="SAP__common.FieldControlType/Mandatory"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Version"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/RouteVersValdtyStartDateTime">
+                <Annotation Term="SAP__common.FieldControl" EnumMember="SAP__common.FieldControlType/Mandatory"/>
+                <Annotation Term="SAP__common.Label" String="Valid From TimeStamp"/>
+                <Annotation Term="SAP__common.Heading" String="Valid From Time Stamp"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Valid From Time Stamp"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpRouteVersionStatus">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Status of Route Vers"/>
+                <Annotation Term="SAP__common.Heading" String="Status of Route Version"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Status of a Route Version"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpRouteVersionIsBlkd">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Version is Blocked"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpRouteVersIsSelfLoadg">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Loading by Driver"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/AvgTransportDuration">
+                <Annotation Term="SAP__common.FieldControl" EnumMember="SAP__common.FieldControlType/Mandatory"/>
+                <Annotation Term="SAP__common.Label" String="Average Transp.Time"/>
+                <Annotation Term="SAP__common.Heading" String="Average Transport Time"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Average Transport Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/AvgTransportTimeUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.FieldControl" EnumMember="SAP__common.FieldControlType/Mandatory"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/PlngCalendarPerdcLotSizing">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Time stream ID"/>
+                <Annotation Term="SAP__common.Heading" String="TS ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Time stream: External ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/PlanningCalendar">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Calendar ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/PackagingMaterial">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Pack. Material"/>
+                <Annotation Term="SAP__common.Heading" String="Packaging Material"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Packaging Material"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/NumberOfHandlingUnit">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Number of HUs"/>
+                <Annotation Term="SAP__common.Heading" String="Number of Handling Units"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Number of Handling Units"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/RsceIsRqdForLoadg">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="ExecResourceReqLoad"/>
+                <Annotation Term="SAP__common.Heading" String="Executing Resource Is Required For Loading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Executing Resource Is Required For Loading"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/UnitPositionIsRqdForLoadg">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="UnitPosReqForLoad"/>
+                <Annotation Term="SAP__common.Heading" String="Unit Position is Required for Loading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unit Position is Required for Loading"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/UnitPositionForLoadgMinValue">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="UnitPosForLoading"/>
+                <Annotation Term="SAP__common.Heading" String="Unit Position for Loading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unit Position for Loading"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/UnitPositionForLoadgMaxValue">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="UnitPosForLoading"/>
+                <Annotation Term="SAP__common.Heading" String="Unit Position for Loading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unit Position for Loading"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/StartPointIsRqdForLoadg">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Confirmation Req."/>
+                <Annotation Term="SAP__common.Heading" String="Starting Point Confirmation Required for Loading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Starting Point Confirmation Required for Loading"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/RsceIsRqdForUnldg">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="ExecResourceReqUnl"/>
+                <Annotation Term="SAP__common.Heading" String="Executing Resource Is Required for Unloading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Executing Resource Is Required for Unloading"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpConfirmationMethod">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Conf. Method"/>
+                <Annotation Term="SAP__common.Heading" String="Confirmation Method of Route"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Confirmation Method of Route"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/UnldgStopSqncIsChangable">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Changeable Unl Stop"/>
+                <Annotation Term="SAP__common.Heading" String="Unloading Stop Sequence is Changeable"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unloading Stop Sequence is Changeable"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpPrfrdUnldgDirection">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Pref. Unloading Dir."/>
+                <Annotation Term="SAP__common.Heading" String="Preferred Unloading Direction"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Route Preferred Unloading Direction"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/RsrcGrp">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Resource Group"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpCycleTimeUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/StartBufferTimeUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/EndBufferTimeUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpDepartureTimeType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Departure Time Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpPlanningHorizonUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/AvgLoadingTimeUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpAttachment">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Attachment UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Attachment UUID Link"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpTourCrtnPrecondition">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Tour Create Precond"/>
+                <Annotation Term="SAP__common.Heading" String="Tour Creation Precondition"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Tour Creation Precondition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpLowerTimeLimitUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpUpperTimeLimitUnit">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Time Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/CreationDateTime">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Time Stamp"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/CreatedByUser">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="User Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/LastChangeDateTime">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Time Stamp"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/LastChangedByUser">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="User Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType">
+                <Annotation Term="SAP__common.Label" String="MFG Logistics Route Version"/>
+                <Annotation Term="Communication.Contact">
+                    <Record/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/RouteVersions">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpRouteVersionIsBlkd"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpRouteVersIsSelfLoadg"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="PlngCalendarPerdcLotSizing"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="PlanningCalendar"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="RsceIsRqdForLoadg"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="UnitPositionIsRqdForLoadg"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="StartPointIsRqdForLoadg"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="RsceIsRqdForUnldg"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpConfirmationMethod"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="UnldgStopSqncIsChangable"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpPrfrdUnldgDirection"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="RsrcGrp"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpDepartureTimeType"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpAttachment"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntrLogsOpTourCrtnPrecondition"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="CreatedByUser"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="LastChangedByUser"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>
+                                    aggregate
+                                </String>
+                                <String>
+                                    groupby
+                                </String>
+                                <String>
+                                    filter
+                                </String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="SAP__aggregation.RollupType/None"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>
+                            eq
+                        </String>
+                        <String>
+                            ne
+                        </String>
+                        <String>
+                            gt
+                        </String>
+                        <String>
+                            ge
+                        </String>
+                        <String>
+                            lt
+                        </String>
+                        <String>
+                            le
+                        </String>
+                        <String>
+                            and
+                        </String>
+                        <String>
+                            or
+                        </String>
+                        <String>
+                            contains
+                        </String>
+                        <String>
+                            startswith
+                        </String>
+                        <String>
+                            endswith
+                        </String>
+                        <String>
+                            any
+                        </String>
+                        <String>
+                            all
+                        </String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>
+                            application/json
+                        </String>
+                        <String>
+                            application/pdf
+                        </String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntrLogsOpTourUUID">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntralogisticsOperationsStop">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Stop ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntrLogsOpStopType">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Stop Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntrLogsOpStopStatus">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Tour Stop Status"/>
+                <Annotation Term="SAP__common.Heading" String="Stop Status of Tour"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Status of Tour Stop"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntrLogsOpHandoverPoint">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Handover Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntrLogsOpConfirmationMethod">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Route Conf. Method"/>
+                <Annotation Term="SAP__common.Heading" String="Confirmation Method of Route"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Confirmation Method of Route"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/NumberOfHandlingUnit">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Number of HUs"/>
+                <Annotation Term="SAP__common.Heading" String="Number of Handling Units"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Number of Handling Units"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/_TourOpsUnldgHndlgUnit">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType">
+                <Annotation Term="SAP__common.Label" String="Unloading Stop Projection"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>
+                            IntrLogsOpStopType
+                        </PropertyPath>
+                        <PropertyPath>
+                            IntralogisticsOperationsStop
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/UnloadingTourStops">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    IntrLogsOpConfirmationMethod
+                                </PropertyPath>
+                                <PropertyPath>
+                                    NumberOfHandlingUnit
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    IntrLogsOpConfirmationMethod
+                                </PropertyPath>
+                                <PropertyPath>
+                                    NumberOfHandlingUnit
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ExecutionStatusTextsType/SystemStatus">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="System status"/>
+                <Annotation Term="SAP__common.Heading" String="SysSt"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ExecutionStatusTextsType">
+                <Annotation Term="SAP__common.Label" String="System Status - Text"/>
+                <Annotation Term="Communication.Contact">
+                    <Record/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ExecutionStatusTexts">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="SystemStatus"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/IntrLogsOpTourStopUUID">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/IntrLogsOpTourUUID">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/IntrLogsOpTourLoadgPlanStatus">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Status Tour L. Plan"/>
+                <Annotation Term="SAP__common.Heading" String="Status of Tour Loading Plan"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Status of Tour Loading Plan"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/EWMProductionSupplyArea">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Supply Area"/>
+                <Annotation Term="SAP__common.Heading" String="Production Supply Area"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Production Supply Area"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/PackagingMaterial">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Packaging Material"/>
+                <Annotation Term="SAP__common.Heading" String="Pack.Mat."/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/IntrLogsOpHandoverPoint">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Handover Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/DestinationStorageBin">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/ProductName">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Product"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Product Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/ProductDescription">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Product Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/IntrLogsOpFinalStorageBin">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Destination Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Dest. Bin"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Destination Storage Bin"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType">
+                <Annotation Term="SAP__common.Label" String="Unloading Handling Unit Projection"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>
+                            HandlingUnitNumber
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/UnloadingHandlingUnits">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    ProductName
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ProductDescription
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpFinalStorageBin
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    ProductName
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ProductDescription
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpFinalStorageBin
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/EWMWarehouse">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Warehouse Number"/>
+                <Annotation Term="SAP__common.Heading" String="WhN"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Warehouse Number/Warehouse Complex"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/IntrLogsOpTourUUID">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/PackagingMaterial">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Packaging Material"/>
+                <Annotation Term="SAP__common.Heading" String="Pack.Mat."/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/LoadingLogicalPosition">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Actual HU Position"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Actual Handling Unit Position"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/DestinationStorageBin">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Destination Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Dest. Bin"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Destination Storage Bin"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/SourceStorageBin">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Source Storage Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Source Bin"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/Status">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Status Tour L. Plan"/>
+                <Annotation Term="SAP__common.Heading" String="Status of Tour Loading Plan"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Status of Tour Loading Plan"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/ProductName">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Product"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Product Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/ProductDescription">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Product Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/IntrLogsOpFinalStorageBin">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Destination Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Dest. Bin"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Destination Storage Bin"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/IntrLogsOpHandoverPoint">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Handover Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/EWMProductionSupplyArea">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Supply Area"/>
+                <Annotation Term="SAP__common.Heading" String="Production Supply Area"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Production Supply Area"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/IntrLogsOpLoadgSrceStorageBin">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Loadg Source Bin"/>
+                <Annotation Term="SAP__common.Heading" String="Source Storage Bin for Loading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Source Storage Bin"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType">
+                <Annotation Term="SAP__common.Label" String="Loading Handling Unit Projection"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>
+                            HandlingUnitNumber
+                        </PropertyPath>
+                        <PropertyPath>
+                            EWMWarehouse
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/LoadingHandlingUnits">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    Status
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ProductName
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ProductDescription
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpFinalStorageBin
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpHandoverPoint
+                                </PropertyPath>
+                                <PropertyPath>
+                                    EWMProductionSupplyArea
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpLoadgSrceStorageBin
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>
+                                    Status
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ProductName
+                                </PropertyPath>
+                                <PropertyPath>
+                                    ProductDescription
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpFinalStorageBin
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpHandoverPoint
+                                </PropertyPath>
+                                <PropertyPath>
+                                    EWMProductionSupplyArea
+                                </PropertyPath>
+                                <PropertyPath>
+                                    IntrLogsOpLoadgSrceStorageBin
+                                </PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.UsersType/IntralogisticsOperationsUser">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="User"/>
+                <Annotation Term="SAP__common.Heading" String="User Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="User Name in User Master Record"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UsersType">
+                <Annotation Term="SAP__common.Label" String="Route Train Operations: User Projection"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>
+                            IntralogisticsOperationsUser
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Users">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="IntralogisticsOperationsUser"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/IntrLogsOpRouteUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/LifeCycleStatusDateTime">
+                <Annotation Term="SAP__common.Label" String="Life Cycle TimeStamp"/>
+                <Annotation Term="SAP__common.Heading" String="Life Cycle Time Stamp"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Life Cycle Time Stamp"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/CreationDateTime">
+                <Annotation Term="SAP__common.Label" String="Time Stamp"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RoutesType/LastChangeDateTime">
+                <Annotation Term="SAP__common.Label" String="Time Stamp"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpTourUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpRouteUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntrLogsOpRouteVersionUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/IntralogisticsOperationsLoader">
+                <Annotation Term="SAP__common.Label" String="Load. Employee"/>
+                <Annotation Term="SAP__common.Heading" String="Loading Employee of Tour"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Loading Employee of Tour"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/WarehouseResource">
+                <Annotation Term="SAP__common.Label" String="Towing Vehicle"/>
+                <Annotation Term="SAP__common.Heading" String="Towing Vehicle of Tour"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Towing Vehicle of Tour"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingToursType/PlannedDepartureUTCDateTime">
+                <Annotation Term="SAP__common.Label" String="PlanTourDeparture"/>
+                <Annotation Term="SAP__common.Heading" String="Time Stamp of Planned Tour Departure"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Planned Tour Departure Date and Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpTourUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpRouteUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntrLogsOpRouteVersionUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/WarehouseResource">
+                <Annotation Term="SAP__common.Label" String="Towing Vehicle"/>
+                <Annotation Term="SAP__common.Heading" String="Towing Vehicle of Tour"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Towing Vehicle of Tour"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/IntralogisticsOperationsDriver">
+                <Annotation Term="SAP__common.Label" String="Rte Train Driver"/>
+                <Annotation Term="SAP__common.Heading" String="Route Train Driver"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Route Train Driver"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/PlannedDepartureUTCDateTime">
+                <Annotation Term="SAP__common.Label" String="PlanTourDeparture"/>
+                <Annotation Term="SAP__common.Heading" String="Time Stamp of Planned Tour Departure"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Planned Tour Departure Date and Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingToursType/ILOPlannedArrivalUTCDateTime">
+                <Annotation Term="SAP__common.Label" String="PlanTourArrival"/>
+                <Annotation Term="SAP__common.Heading" String="Time Stamp of Planned Tour Arrival"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Planned Arrival Date and Time of Tour"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpRouteVersionUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpRouteUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpCycleTime">
+                <Annotation Term="SAP__common.Label" String="Cycle Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/StartBufferDuration">
+                <Annotation Term="SAP__common.Label" String="Start Buffer Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/EndBufferDuration">
+                <Annotation Term="SAP__common.Label" String="End Buffer Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpPlanningHorizon">
+                <Annotation Term="SAP__common.Label" String="Planning Horizon"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/AvgLoadingDuration">
+                <Annotation Term="SAP__common.Label" String="Average Loading Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpShift1CycleTime">
+                <Annotation Term="SAP__common.Label" String="Shift 1 Cycle Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpShift2CycleTime">
+                <Annotation Term="SAP__common.Label" String="Shift 2 Cycle Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpShift3CycleTime">
+                <Annotation Term="SAP__common.Label" String="Shift 3 Cycle Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpShift4CycleTime">
+                <Annotation Term="SAP__common.Label" String="Shift 4 Cycle Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpShift5CycleTime">
+                <Annotation Term="SAP__common.Label" String="Shift 5 Cycle Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpLowerTimeLimit">
+                <Annotation Term="SAP__common.Label" String="Lower Time Limit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.RouteVersionsType/IntrLogsOpUpperTimeLimit">
+                <Annotation Term="SAP__common.Label" String="Upper Time Limit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/IntrLogsOpTourStopUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/RouteStopSequenceNumber">
+                <Annotation Term="SAP__common.Label" String="Sequence No. of Stop"/>
+                <Annotation Term="SAP__common.Heading" String="Sequence Number of Stop"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Sequence Number of Stop"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingTourStopsType/ExecutionStopSequenceNumber">
+                <Annotation Term="SAP__common.Label" String="Actual Sequence No."/>
+                <Annotation Term="SAP__common.Heading" String="Actual Sequence Number"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Actual Sequence Number of Stops"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ExecutionStatusTextsType/Language">
+                <Annotation Term="SAP__common.Label" String="Language Key"/>
+                <Annotation Term="SAP__common.Heading" String="Language"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ExecutionStatusTextsType/SystemStatusName">
+                <Annotation Term="SAP__common.Label" String="Status"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Object status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ExecutionStatusTextsType/SystemStatusShortName">
+                <Annotation Term="SAP__common.Label" String="Status"/>
+                <Annotation Term="SAP__common.Heading" String="Stat"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Individual status of an object (short form)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/IntrLogsOpTourLoadgPlanUUID">
+                <Annotation Term="SAP__common.Label" String="Key"/>
+                <Annotation Term="SAP__common.QuickInfo" String="UUID serving as key (parent key, root key)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/HandlingUnitNumber">
+                <Annotation Term="SAP__common.Label" String="Handling Unit"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Handling Unit Identification"/>
+            </Annotations>
+            <Annotations Target="SAP__self.UnloadingHandlingUnitsType/HandlingUnitUUID">
+                <Annotation Term="SAP__common.Label" String="HU GUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unique Internal Identification of a Handling Unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/HandlingUnitNumber">
+                <Annotation Term="SAP__common.Label" String="Handling Unit"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Handling Unit Identification"/>
+            </Annotations>
+            <Annotations Target="SAP__self.LoadingHandlingUnitsType/HandlingUnitUUID">
+                <Annotation Term="SAP__common.Label" String="HU GUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unique Internal Identification of a Handling Unit"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

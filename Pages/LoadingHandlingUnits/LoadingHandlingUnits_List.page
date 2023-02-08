@@ -1,0 +1,67 @@
+{
+	"Caption": "LoadingHandlingUnits",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{EWMWarehouse}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/Test/Actions/LoadingHandlingUnits/NavToLoadingHandlingUnits_Detail.action",
+						"StatusImage": "",
+						"Title": "{ProductName}",
+						"Footnote": "{PackagingMaterial}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{LoadingLogicalPosition}",
+						"Subhead": "{HandlingUnitNumber}",
+						"SubstatusText": "{DestinationStorageBin}"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "LoadingHandlingUnits",
+						"Service": "/Test/Services/RTOP.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "LoadingHandlingUnits_List",
+	"PrefersLargeCaption": true
+}

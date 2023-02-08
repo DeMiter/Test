@@ -1,0 +1,65 @@
+{
+	"Caption": "ExecutionStatusTextsType Detail",
+	"DesignTimeTarget": {
+		"Service": "/Test/Services/RTOP.service",
+		"EntitySet": "ExecutionStatusTexts",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{SystemStatusName}",
+						"Subhead": "{SystemStatus}",
+						"BodyText": "",
+						"Footnote": "{SystemStatusShortName}",
+						"Description": "{Language}",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "SystemStatus",
+							"Value": "{SystemStatus}"
+						},
+						{
+							"KeyName": "Language",
+							"Value": "{Language}"
+						},
+						{
+							"KeyName": "SystemStatusName",
+							"Value": "{SystemStatusName}"
+						},
+						{
+							"KeyName": "SystemStatusShortName",
+							"Value": "{SystemStatusShortName}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ExecutionStatusTexts_Detail",
+	"PrefersLargeCaption": true
+}

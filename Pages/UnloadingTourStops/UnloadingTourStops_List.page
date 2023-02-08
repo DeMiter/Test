@@ -1,0 +1,67 @@
+{
+	"Caption": "UnloadingTourStops",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{RouteStopSequenceNumber}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/Test/Actions/UnloadingTourStops/NavToUnloadingTourStops_Detail.action",
+						"StatusImage": "",
+						"Title": "{IntralogisticsOperationsStop}",
+						"Footnote": "{ExecutionStopSequenceNumber}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{IntrLogsOpStopStatus}",
+						"Subhead": "{IntrLogsOpStopType}",
+						"SubstatusText": "{IntrLogsOpHandoverPoint}"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "UnloadingTourStops",
+						"Service": "/Test/Services/RTOP.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "UnloadingTourStops_List",
+	"PrefersLargeCaption": true
+}

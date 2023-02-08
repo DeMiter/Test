@@ -1,0 +1,102 @@
+{
+	"Caption": "Main",
+	"Controls": [
+		{
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable",
+			"Sections": [
+				{
+					"Buttons": [
+						{
+							"OnPress": "/Test/Actions/ExecutionStatusTexts/NavToExecutionStatusTexts_List.action",
+							"Alignment": "Center",
+							"Title": "ExecutionStatusTexts",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/Users/NavToUsers_List.action",
+							"Alignment": "Center",
+							"Title": "Users",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/LoadingHandlingUnits/NavToLoadingHandlingUnits_List.action",
+							"Alignment": "Center",
+							"Title": "LoadingHandlingUnits",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/LoadingTours/NavToLoadingTours_List.action",
+							"Alignment": "Center",
+							"Title": "LoadingTours",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/Routes/NavToRoutes_List.action",
+							"Alignment": "Center",
+							"Title": "Routes",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/RouteVersions/NavToRouteVersions_List.action",
+							"Alignment": "Center",
+							"Title": "RouteVersions",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/UnloadingTours/NavToUnloadingTours_List.action",
+							"Alignment": "Center",
+							"Title": "UnloadingTours",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/UnloadingHandlingUnits/NavToUnloadingHandlingUnits_List.action",
+							"Alignment": "Center",
+							"Title": "UnloadingHandlingUnits",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						},
+						{
+							"OnPress": "/Test/Actions/UnloadingTourStops/NavToUnloadingTourStops_List.action",
+							"Alignment": "Center",
+							"Title": "UnloadingTourStops",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
+						}
+					],
+					"_Name": "SectionButtonTable0",
+					"_Type": "Section.Type.ButtonTable"
+				}
+			]
+		}
+	],
+	"_Name": "Main",
+	"_Type": "Page",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Name": "LogoutToolbarItem",
+				"_Type": "Control.Type.ToolbarItem",
+				"Caption": "Logout",
+				"OnPress": "/Test/Actions/LogoutMessage.action"
+			},
+			{
+				"_Name": "UpdateToolbarItem",
+				"_Type": "Control.Type.ToolbarItem",
+				"Caption": "Update",
+				"Enabled": true,
+				"Clickable": true,
+				"OnPress": "/Test/Actions/AppUpdateProgressBanner.action",
+				"Visible": "$(PLT,true,true,false)"
+			}
+		]
+	},
+	"PrefersLargeCaption": true
+}

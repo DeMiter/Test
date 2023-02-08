@@ -1,0 +1,233 @@
+{
+	"Caption": "RouteVersionsType Detail",
+	"DesignTimeTarget": {
+		"Service": "/Test/Services/RTOP.service",
+		"EntitySet": "RouteVersions",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{IntrLogsOpRouteVersion}",
+						"Subhead": "{RouteVersValdtyStartDateTime}",
+						"BodyText": "",
+						"Footnote": "{IntrLogsOpRouteVersionIsBlkd}",
+						"Description": "{IntrLogsOpRouteVersionStatus}",
+						"StatusText": "{IntrLogsOpRouteVersIsSelfLoadg}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{AvgTransportDuration}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "IntrLogsOpRouteVersion",
+							"Value": "{IntrLogsOpRouteVersion}"
+						},
+						{
+							"KeyName": "RouteVersValdtyStartDateTime",
+							"Value": "{RouteVersValdtyStartDateTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteVersionStatus",
+							"Value": "{IntrLogsOpRouteVersionStatus}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteVersionIsBlkd",
+							"Value": "{IntrLogsOpRouteVersionIsBlkd}"
+						},
+						{
+							"KeyName": "IntrLogsOpRouteVersIsSelfLoadg",
+							"Value": "{IntrLogsOpRouteVersIsSelfLoadg}"
+						},
+						{
+							"KeyName": "AvgTransportDuration",
+							"Value": "{AvgTransportDuration}"
+						},
+						{
+							"KeyName": "AvgTransportTimeUnit",
+							"Value": "{AvgTransportTimeUnit}"
+						},
+						{
+							"KeyName": "PlngCalendarPerdcLotSizing",
+							"Value": "{PlngCalendarPerdcLotSizing}"
+						},
+						{
+							"KeyName": "PlanningCalendar",
+							"Value": "{PlanningCalendar}"
+						},
+						{
+							"KeyName": "PackagingMaterial",
+							"Value": "{PackagingMaterial}"
+						},
+						{
+							"KeyName": "NumberOfHandlingUnit",
+							"Value": "{NumberOfHandlingUnit}"
+						},
+						{
+							"KeyName": "RsceIsRqdForLoadg",
+							"Value": "{RsceIsRqdForLoadg}"
+						},
+						{
+							"KeyName": "UnitPositionIsRqdForLoadg",
+							"Value": "{UnitPositionIsRqdForLoadg}"
+						},
+						{
+							"KeyName": "UnitPositionForLoadgMinValue",
+							"Value": "{UnitPositionForLoadgMinValue}"
+						},
+						{
+							"KeyName": "UnitPositionForLoadgMaxValue",
+							"Value": "{UnitPositionForLoadgMaxValue}"
+						},
+						{
+							"KeyName": "StartPointIsRqdForLoadg",
+							"Value": "{StartPointIsRqdForLoadg}"
+						},
+						{
+							"KeyName": "RsceIsRqdForUnldg",
+							"Value": "{RsceIsRqdForUnldg}"
+						},
+						{
+							"KeyName": "IntrLogsOpConfirmationMethod",
+							"Value": "{IntrLogsOpConfirmationMethod}"
+						},
+						{
+							"KeyName": "UnldgStopSqncIsChangable",
+							"Value": "{UnldgStopSqncIsChangable}"
+						},
+						{
+							"KeyName": "IntrLogsOpPrfrdUnldgDirection",
+							"Value": "{IntrLogsOpPrfrdUnldgDirection}"
+						},
+						{
+							"KeyName": "RsrcGrp",
+							"Value": "{RsrcGrp}"
+						},
+						{
+							"KeyName": "IntrLogsOpCycleTime",
+							"Value": "{IntrLogsOpCycleTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpCycleTimeUnit",
+							"Value": "{IntrLogsOpCycleTimeUnit}"
+						},
+						{
+							"KeyName": "StartBufferDuration",
+							"Value": "{StartBufferDuration}"
+						},
+						{
+							"KeyName": "StartBufferTimeUnit",
+							"Value": "{StartBufferTimeUnit}"
+						},
+						{
+							"KeyName": "EndBufferDuration",
+							"Value": "{EndBufferDuration}"
+						},
+						{
+							"KeyName": "EndBufferTimeUnit",
+							"Value": "{EndBufferTimeUnit}"
+						},
+						{
+							"KeyName": "IntrLogsOpDepartureTimeType",
+							"Value": "{IntrLogsOpDepartureTimeType}"
+						},
+						{
+							"KeyName": "IntrLogsOpPlanningHorizon",
+							"Value": "{IntrLogsOpPlanningHorizon}"
+						},
+						{
+							"KeyName": "IntrLogsOpPlanningHorizonUnit",
+							"Value": "{IntrLogsOpPlanningHorizonUnit}"
+						},
+						{
+							"KeyName": "AvgLoadingDuration",
+							"Value": "{AvgLoadingDuration}"
+						},
+						{
+							"KeyName": "AvgLoadingTimeUnit",
+							"Value": "{AvgLoadingTimeUnit}"
+						},
+						{
+							"KeyName": "IntrLogsOpShift1CycleTime",
+							"Value": "{IntrLogsOpShift1CycleTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpShift2CycleTime",
+							"Value": "{IntrLogsOpShift2CycleTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpShift3CycleTime",
+							"Value": "{IntrLogsOpShift3CycleTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpShift4CycleTime",
+							"Value": "{IntrLogsOpShift4CycleTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpShift5CycleTime",
+							"Value": "{IntrLogsOpShift5CycleTime}"
+						},
+						{
+							"KeyName": "IntrLogsOpTourCrtnPrecondition",
+							"Value": "{IntrLogsOpTourCrtnPrecondition}"
+						},
+						{
+							"KeyName": "IntrLogsOpLowerTimeLimit",
+							"Value": "{IntrLogsOpLowerTimeLimit}"
+						},
+						{
+							"KeyName": "IntrLogsOpLowerTimeLimitUnit",
+							"Value": "{IntrLogsOpLowerTimeLimitUnit}"
+						},
+						{
+							"KeyName": "IntrLogsOpUpperTimeLimit",
+							"Value": "{IntrLogsOpUpperTimeLimit}"
+						},
+						{
+							"KeyName": "IntrLogsOpUpperTimeLimitUnit",
+							"Value": "{IntrLogsOpUpperTimeLimitUnit}"
+						},
+						{
+							"KeyName": "CreationDateTime",
+							"Value": "{CreationDateTime}"
+						},
+						{
+							"KeyName": "CreatedByUser",
+							"Value": "{CreatedByUser}"
+						},
+						{
+							"KeyName": "LastChangeDateTime",
+							"Value": "{LastChangeDateTime}"
+						},
+						{
+							"KeyName": "LastChangedByUser",
+							"Value": "{LastChangedByUser}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "RouteVersions_Detail",
+	"PrefersLargeCaption": true
+}

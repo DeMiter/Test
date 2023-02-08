@@ -1,0 +1,85 @@
+{
+	"Caption": "UnloadingTourStopsType Detail",
+	"DesignTimeTarget": {
+		"Service": "/Test/Services/RTOP.service",
+		"EntitySet": "UnloadingTourStops",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{IntralogisticsOperationsStop}",
+						"Subhead": "{IntrLogsOpStopType}",
+						"BodyText": "",
+						"Footnote": "{ExecutionStopSequenceNumber}",
+						"Description": "{RouteStopSequenceNumber}",
+						"StatusText": "{IntrLogsOpStopStatus}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{IntrLogsOpHandoverPoint}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "IntralogisticsOperationsStop",
+							"Value": "{IntralogisticsOperationsStop}"
+						},
+						{
+							"KeyName": "IntrLogsOpStopType",
+							"Value": "{IntrLogsOpStopType}"
+						},
+						{
+							"KeyName": "RouteStopSequenceNumber",
+							"Value": "{RouteStopSequenceNumber}"
+						},
+						{
+							"KeyName": "ExecutionStopSequenceNumber",
+							"Value": "{ExecutionStopSequenceNumber}"
+						},
+						{
+							"KeyName": "IntrLogsOpStopStatus",
+							"Value": "{IntrLogsOpStopStatus}"
+						},
+						{
+							"KeyName": "IntrLogsOpHandoverPoint",
+							"Value": "{IntrLogsOpHandoverPoint}"
+						},
+						{
+							"KeyName": "DestinationStorageBin",
+							"Value": "{DestinationStorageBin}"
+						},
+						{
+							"KeyName": "IntrLogsOpConfirmationMethod",
+							"Value": "{IntrLogsOpConfirmationMethod}"
+						},
+						{
+							"KeyName": "NumberOfHandlingUnit",
+							"Value": "{NumberOfHandlingUnit}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "UnloadingTourStops_Detail",
+	"PrefersLargeCaption": true
+}
