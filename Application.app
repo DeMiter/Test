@@ -1,5 +1,5 @@
 {
-	"MainPage": "/Test/Pages/EwmLogon.page",
+	"MainPage": "/Test/Pages/Main.page",
 	"OnLaunch": [
 		"/Test/Actions/Service/InitializeOnline.action"
 	],
